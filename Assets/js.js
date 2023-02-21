@@ -22,15 +22,17 @@ function timer()  {
       if(timeLeft == 0)  {
         clearInterval(timerInterval);
 
-        sendMessage();
-      }
+      sendMessage()
+      }      
     }, 1000);
+ 
 
 
     }
 
     function displayQuestions()  {
-      quizQuestions = quizContainer
+      if(timeLeft > 0)
+      
     }
 
   
@@ -40,7 +42,7 @@ function timer()  {
  const quizQuestions = [
   {
     question1:  "Commonly used data types DO NOT include:",
-    answers: {
+    answers1: {
       1: "1. strings",
       2: "2. booleans",
       3: "3. alerts",
