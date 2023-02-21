@@ -17,9 +17,9 @@ var scoreContainer = document.getElementById("score");
 function timer()  {
     var timerInterval = setInterval(function() {
       timeLeft--;
-      timeE1.textContent = timeLeft + ":";
+      timeE1.textContent = "Time: " + timeLeft;
 
-      if(timeLeft === 0)  {
+      if(timeLeft == 0)  {
         clearInterval(timerInterval);
 
         sendMessage();
@@ -29,8 +29,13 @@ function timer()  {
 
     }
 
+    function displayQuestions()  {
+      quizQuestions = quizContainer
+    }
+
   
     begin.addEventListener("click", timer);
+    begin.addEventListener("click", displayQuestions);
   
  const quizQuestions = [
   {
